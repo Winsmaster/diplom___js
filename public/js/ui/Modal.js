@@ -13,8 +13,10 @@ class Modal {
    * */
   constructor(element){
     this.element = element;
-    this.registerEvents();
-    
+    if (element === undefined) {
+      err = new Error 
+    }
+    this.registerEvents();       
   }
 
   /**

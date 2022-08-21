@@ -18,7 +18,10 @@ class Sidebar {
    * при нажатии на кнопку .sidebar-toggle
    * */
   static initToggleButton() {
-
+      document.querySelector('.sidebar-toggle').addEventListener("click", () => {
+      document.querySelector('.sidebar-mini').classList.toggle('sidebar-open');
+      document.querySelector('.sidebar-mini').classList.toggle('sidebar-collapse');
+    })
   }
 
   /**
@@ -42,5 +45,11 @@ class Sidebar {
         }
       })
      }
+
+     document.querySelector('.menu-item_register > a').onclick = e => {
+      e.preventDefault();
+      App.getModal('register').open();
+     }
+
   }
 }

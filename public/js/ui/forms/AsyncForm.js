@@ -14,6 +14,9 @@ class AsyncForm {
    * */
   constructor(element) {
     this.element = element;
+    if (element === undefined) {
+      err = new Error 
+    }
     this.registerEvents();
   }
 
@@ -22,7 +25,7 @@ class AsyncForm {
    * вызывает метод submit()
    * */
   registerEvents() {
-    this.element.onSubmit = e => {
+    this.element.onsubmit = e => {
       e.preventDefault();
       this.submit();
     }
