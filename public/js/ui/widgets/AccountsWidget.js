@@ -91,10 +91,12 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item){
+    
+
     return `<li class="account" data-id="${item.id}">
                 <a href="#">
-                  <span>${item.name}</span>
-                  <span>${item.sum}</span>
+                  <span>${item.name} / </span> 
+                  <span>${this.divideNumberByPieces(item.sum)} &#x20bd</span>
                 </a>
             </li>`;
   }
@@ -108,4 +110,9 @@ class AccountsWidget {
   renderItem(data){
     this.element.insertAdjacentHTML('beforeend', this.getAccountHTML(data))
   }
+
+  divideNumberByPieces(x, delimiter) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || ",");
+  }
+
 }

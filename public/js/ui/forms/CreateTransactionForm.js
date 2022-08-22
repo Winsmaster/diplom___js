@@ -18,7 +18,8 @@ class CreateTransactionForm extends AsyncForm {
    * */
   renderAccountsList() {
     Account.list(null, (err, resp) => {
-      if (resp && resp.data) {        
+      if (resp && resp.data) {   
+        document.querySelectorAll('.accounts-select').forEach((e) => {e.innerHTML = ""})        
         resp.data.forEach((el) => {
           document.querySelectorAll('.accounts-select').forEach((e) => {
             e.insertAdjacentHTML('beforeend', 

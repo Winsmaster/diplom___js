@@ -34,5 +34,7 @@ class TransactionsWidget {
       e.preventDefault();
       App.getModal('newExpense').open();      
      }
+
+     
   }
 }

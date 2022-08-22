@@ -23,6 +23,12 @@
       "email": "xxx@xxx",
       "password": "xxx",
       "id": "1usbcg4l73e9j4k"
+    },
+    {
+      "name": "Илья",
+      "email": "aaa@aaa",
+      "password": "aaa",
+      "id": "1usb9n8l74i3g1m"
     }
   ],
   "accounts": [
@@ -55,6 +61,11 @@
       "name": "Алик",
       "user_id": "1usbcg4l73e9j4k",
       "id": "1usbcg4l73fyaoo"
+    },
+    {
+      "name": "Наличные",
+      "user_id": "1usb9n8l74i3g1m",
+      "id": "1usb9n8l74i63oo"
     }
   ],
   "transactions": [
@@ -176,24 +187,6 @@
       "created_at": "2022-08-19T14:04:14.799Z"
     },
     {
-      "id": "1usbd3ol70jm8od",
-      "type": "income",
-      "name": "2232",
-      "sum": 2222222222222,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-19T14:04:32.749Z"
-    },
-    {
-      "id": "1usbd3ol70jnjbq",
-      "type": "expense",
-      "name": "444444",
-      "sum": 44444444444444,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-19T14:05:33.206Z"
-    },
-    {
       "id": "1usbd3ol70jnp5n",
       "type": "expense",
       "name": "333",
@@ -201,33 +194,6 @@
       "account_id": "2",
       "user_id": "1",
       "created_at": "2022-08-19T14:05:40.763Z"
-    },
-    {
-      "id": "1usbd3ol70jntdx",
-      "type": "income",
-      "name": "11",
-      "sum": 11111111111111,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-19T14:05:46.245Z"
-    },
-    {
-      "id": "1usbd3ol70jnxds",
-      "type": "income",
-      "name": "1112",
-      "sum": 111111111111111100,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-19T14:05:51.424Z"
-    },
-    {
-      "id": "1usbdacl70nz9uu",
-      "type": "expense",
-      "name": "23",
-      "sum": 111080000000007340,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-19T16:06:39.269Z"
     },
     {
       "id": "1usbc58l71qdy2y",
@@ -275,22 +241,13 @@
       "created_at": "2022-08-21T14:45:25.803Z"
     },
     {
-      "id": "1usbeasl73g10p5",
+      "id": "1usb2wwl74ispgm",
       "type": "income",
-      "name": "122321",
-      "sum": 1234567890,
-      "account_id": "1",
-      "user_id": "1",
-      "created_at": "2022-08-21T14:47:22.312Z"
-    },
-    {
-      "id": "1usbeasl73g1udx",
-      "type": "income",
-      "name": "hhhh",
-      "sum": 4567,
-      "account_id": "2",
-      "user_id": "1",
-      "created_at": "2022-08-21T14:48:00.789Z"
+      "name": "Подарили",
+      "sum": 900000,
+      "account_id": "1usb9n8l74i63oo",
+      "user_id": "1usb9n8l74i3g1m",
+      "created_at": "2022-08-22T08:52:39.526Z"
     }
   ]
 }

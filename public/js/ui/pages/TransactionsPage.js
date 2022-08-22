@@ -78,14 +78,17 @@ class TransactionsPage {
   removeAccount() {
     if (!this.lastOptions) {
       return
+    }
+    if (confirm('Вы действительно хотите удалить счет?')) {
+      Account.remove({id: this.lastOptions.account_id}, (err, resp) => {
+        if (resp && resp.success) {
+          App.updateWidgets();
+          App.updateForms();
+          this.clear();
+        }
+      });
     }    
-    Account.remove({id: this.lastOptions.account_id}, (err, resp) => {
-      if (resp && resp.success) {
-        App.updateWidgets();
-        App.updateForms();
-        this.clear();
-      }
-    });
+    
      
   }
 
@@ -95,14 +98,15 @@ class TransactionsPage {
    * По удалению транзакции вызовите метод App.update(),
    * либо обновляйте текущую страницу (метод update) и виджет со счетами
    * */
-  removeTransaction( id ) {    
-    Transaction.remove({id: id}, (err, resp) => {
-      if (resp && resp.success) {
-        console.log(resp)
-        App.update()
-      }      
-    });
-   
+  removeTransaction( id ) {  
+    console.log (id)  
+    if (confirm("Вы действительно хотите удалить транзакцию?")){
+      Transaction.remove({id: id}, (err, resp) => {
+        if (resp && resp.success) {
+          App.update()
+        }      
+      });
+    }  
   }
 
   /**
@@ -178,7 +182,7 @@ class TransactionsPage {
      <div class="col-md-3">
        <div class="transaction__summ">
        
-           ${item.sum} <span class="currency">₽</span>
+           ${this.divideNumberByPieces(item.sum)} <span class="currency">₽</span>
        </div>
      </div>
      <div class="col-md-2 transaction__controls">
@@ -201,5 +205,9 @@ class TransactionsPage {
       })         
       
   
+  }
+
+  divideNumberByPieces(x, delimiter) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || ",");
   }
 }
